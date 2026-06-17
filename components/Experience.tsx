@@ -2,10 +2,12 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { experiencesData } from "@/lib/data";
+import { useInViewSection } from "@/lib/hook";
 
 function Experience() {
+   const {ref} = useInViewSection("Experience", 0.33)
   return (
-    <section id="experience" className="py-16 px-4 max-w-5xl mx-auto">
+    <section ref={ref} id="experience" className="py-16 px-4 max-w-5xl mx-auto">
       <SectionHeading>My Experience</SectionHeading>
 
       <div className="relative mt-12">
